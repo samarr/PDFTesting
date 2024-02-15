@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class PDFCompareDemoTest extends BaseTest{
 
-    @Test
+    @Test (description = "base.pdf and baseline.pdf are identical. This test asserting that both are same.")
     public void identialPDFtest() {
         String baseFileName = pdfResourcesLocation+ "base.pdf";
         String expectedFileName = pdfResourcesLocation+"baseline.pdf";
@@ -15,7 +15,7 @@ public class PDFCompareDemoTest extends BaseTest{
         compareResult.writeTo(outputFolderName+"/"+"identical");
         Assert.assertTrue(compareResult.isEqual());
     }
-    @Test
+    @Test (description = "In boldname.pdf, name value is in bold. The test is asserting that difference is detected.")
     public void boldFontDifferenceInPDFTest(){
         String baseFileName = pdfResourcesLocation+ "base.pdf";
         String boldLetteredNameFileName = pdfResourcesLocation+ "boldname.pdf";
@@ -25,8 +25,9 @@ public class PDFCompareDemoTest extends BaseTest{
         compareResult.writeTo(outputFolderName+"/"+"boldFontDifference");
     }
 
-    @Test
-    public void colorDifferenceinPDFTest(){
+    @Test (description = "In differencecolor.pdf, one of the word in different color. The test is asserting that" +
+            " difference.")
+    public void colorDifferenceInPDFTest(){
         String baseFileName = pdfResourcesLocation+ "base.pdf";
         String boldLetteredNameFileName = pdfResourcesLocation+ "differentcolor.pdf";
 
@@ -35,7 +36,7 @@ public class PDFCompareDemoTest extends BaseTest{
         compareResult.writeTo(outputFolderName+"/"+"colorDifference");
     }
 
-    @Test
+    @Test (description = "In highlights.pdf, one of the word is highlighted. The test is asserting that difference.")
     public void highLightedTextInPDFTest(){
         String baseFileName = pdfResourcesLocation+ "base.pdf";
         String boldLetteredNameFileName = pdfResourcesLocation+ "highlights.pdf";
@@ -45,7 +46,8 @@ public class PDFCompareDemoTest extends BaseTest{
         compareResult.writeTo(outputFolderName+"/"+"highlightedText");
     }
 
-    @Test
+    @Test (description = "Both PDF have different orientation but identical text and format. The test is asserting the" +
+            " difference.")
     public void differentOrientationPDFTest(){
         String baseFileName = pdfResourcesLocation+ "base.pdf";
         String boldLetteredNameFileName = pdfResourcesLocation+ "landscape.pdf";
@@ -55,7 +57,7 @@ public class PDFCompareDemoTest extends BaseTest{
         compareResult.writeTo(outputFolderName+"/"+"landscapeOriented");
     }
 
-    @Test
+    @Test (description = "In noborder.pdf table does not have border. The test is asserting the difference.")
     public void zeroBorderSizePDFTest(){
         String baseFileName = pdfResourcesLocation+ "base.pdf";
         String boldLetteredNameFileName = pdfResourcesLocation+ "noborder.pdf";
@@ -65,7 +67,7 @@ public class PDFCompareDemoTest extends BaseTest{
         compareResult.writeTo(outputFolderName+"/"+"noBorderComparison");
     }
 
-    @Test
+    @Test (description = "In verticalname.pdf, one of the word is vertically aligned. The test is asserting the difference.")
     public void differentTextAlignmentPDFTest(){
         String baseFileName = pdfResourcesLocation+ "base.pdf";
         String boldLetteredNameFileName = pdfResourcesLocation+ "verticalname.pdf";
@@ -75,7 +77,7 @@ public class PDFCompareDemoTest extends BaseTest{
         compareResult.writeTo(outputFolderName+"/"+"differentTextAlignment");
     }
 
-    @Test
+    @Test (description = "In largerfont.pdf one of the word has .5 larger font. The test is asserting the difference.")
     public void differentFontSizePDFTest(){
         String baseFileName = pdfResourcesLocation+ "base.pdf";
         String boldLetteredNameFileName = pdfResourcesLocation+ "largerfont.pdf";
@@ -85,7 +87,7 @@ public class PDFCompareDemoTest extends BaseTest{
         compareResult.writeTo(outputFolderName+"/"+"differentFontSize");
     }
 
-    @Test
+    @Test (description = "In largeborder.pdf table has slightly bigger border. The test is asserting the difference.")
     public void differentBorderSizePDFTest(){
         String baseFileName = pdfResourcesLocation+ "base.pdf";
         String boldLetteredNameFileName = pdfResourcesLocation+ "largeborder.pdf";
@@ -95,7 +97,8 @@ public class PDFCompareDemoTest extends BaseTest{
         compareResult.writeTo(outputFolderName+"/"+"differentBorderSize");
     }
 
-    @Test
+    @Test (description = "In differenttext.pdf one of the letter is non-English but look almost same. " +
+            "The test is asserting the difference.")
     public void diffentTextinPDFTest(){
         String baseFileName = pdfResourcesLocation+ "base.pdf";
         String boldLetteredNameFileName = pdfResourcesLocation+ "differenttext.pdf";
@@ -105,7 +108,8 @@ public class PDFCompareDemoTest extends BaseTest{
         compareResult.writeTo(outputFolderName+"/"+"letterDifference");
     }
 
-    @Test
+    @Test (description = "In both the PDF, name is different. However the test is ignoring the text box as per ignore.conf" +
+            " and asserting that rest of the PDF are matching.")
     public void differentNameWithIgnoreAreaPDFTest(){
         String baseFileName = pdfResourcesLocation+ "base.pdf";
         String boldLetteredNameFileName = pdfResourcesLocation+ "ignorename.pdf";
@@ -115,7 +119,5 @@ public class PDFCompareDemoTest extends BaseTest{
         Assert.assertTrue(compareResult.isEqual());
         compareResult.writeTo(outputFolderName+"/"+"ignoreDifference");
     }
-
-
 
 }
