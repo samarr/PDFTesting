@@ -6,7 +6,7 @@ The project is boilerplate code for visual comparison of two PDF files and show 
 
 In this project, multiple example test scenarios are created to showcase the capability of the library as well as the implementation pattern. TestNG has been used as test runner.
 
-It is build with Java 19 and Maven. Though, you can downgrade JDK version to 1.8.
+It is build with Java 19 and Maven. Though, you can downgrade JDK version upto 1.8.
 
 
 ## How to run the tests
