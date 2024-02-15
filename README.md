@@ -1,6 +1,6 @@
-# PDFTesting
+# PDF visual comparison test
 
-The project is boilerplate code for comparison of two PDF files and show differences if any.
+The project is boilerplate code for visual comparison of two PDF files and show differences if any.
 
 [PDFCompare](https://github.com/red6/pdfcompare) a java library has been used for the comparison. It renders files and compare them pixel by pixel.
 
