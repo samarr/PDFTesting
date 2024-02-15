@@ -1,4 +1,4 @@
-# PDF visual comparison tests
+# PDF visual comparison tests [![Java CI with Maven](https://github.com/samarr/PDFTesting/actions/workflows/maven.yml/badge.svg)](https://github.com/samarr/PDFTesting/actions/workflows/maven.yml)
 
 The project is boilerplate code for visual comparison of two PDF files and show differences if any.
 
