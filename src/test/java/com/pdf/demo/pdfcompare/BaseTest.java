@@ -13,15 +13,15 @@ import java.nio.file.Paths;
 
 public class BaseTest {
 
-   static String outputFolderName = "output";
+   static String outputFolder = "output";
     static String pdfResourcesLocation = "src/test/resources/";
 
     @BeforeClass
     public static void init()
     {
         try {
-            FileUtils.deleteDirectory(new File(outputFolderName));
-            Files.createDirectories(Paths.get(outputFolderName));
+            FileUtils.deleteDirectory(new File(outputFolder));
+            Files.createDirectories(Paths.get(outputFolder));
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
