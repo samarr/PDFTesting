@@ -1,4 +1,4 @@
-# PDF visual comparison test
+# PDF visual comparison tests
 
 The project is boilerplate code for visual comparison of two PDF files and show differences if any.
 
@@ -9,7 +9,7 @@ In this project, multiple example test scenarios are created to showcase the cap
 It is build with Java 19 and Maven. Though, you can downgrade JDK version to 1.8.
 
 
-## How to run the test
+## How to run the tests
 Run the following command to execute all the tests.
 
 `mvn clean test`
