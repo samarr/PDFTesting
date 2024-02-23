@@ -36,3 +36,19 @@ Following scenarios are getting covered so far where differences are present in 
 * No color for table border
 * Text direction is different
 * Skip a section during the comparison
+
+## Desktop Tool
+
+The PDFCompare has desktop tool version as well. It can compare two PDF side by side with an UI. 
+You can go to latest version of the release in https://repo1.maven.org/maven2/de/redsix/pdfcompare/.
+Download the pdfcompare-X.X.XX-full.jar file. Double click to open.
+
+The tool helps in finding Exclusions or ignore area co-ordinates.
+![pdf-studio-bar.png](images%2Fpdf-studio-bar.png)
+
+Use cursor to select the area. Once done, the co-ordinates will be shown in right side. Click on save button.
+It will create a conf file which can be used in the program directly. You can create one conf file with multiple exclusions.
+![exlusions.png](images%2Fexlusions.png)
+
+
+
